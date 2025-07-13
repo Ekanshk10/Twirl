@@ -4,7 +4,7 @@
     "slug": "Twirl",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/twirl_icon.png",
     "scheme": "twirl",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
