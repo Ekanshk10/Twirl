@@ -9,8 +9,10 @@ module.exports = {
         primary: "#FFF0F6",
         secondary: "#A36CD2",
         light:{
-          100 :"#FF7CA8"
-        }
+          100 :"#FF7CA8",
+          200:"#FFB6C1"
+        },
+        placeholder: "#9CA3AF",
       }
     },
   },
