@@ -65,6 +65,7 @@ export default function Index() {
                 }}
                 className="border border-light-200 rounded-3xl px-4 py-2 mb-3 w-[358px] h-[48px] bg-white text-placeholder"
                 placeholder={`Food Option ${index+1}`}
+                placeholderTextColor="#9CA3AF"
               />
             ))}
           </View>
