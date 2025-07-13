@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Twirl",
-    "slug": "Twirl",
+    "slug": "twirl",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/twirl_icon.png",
@@ -16,7 +16,12 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ],
+      "package": "com.ekansh_kanot.twirl"
     },
     "web": {
       "bundler": "metro",
@@ -33,10 +38,18 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      "expo-audio"
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "cff60c2c-509e-42ef-a75a-a21748b8cacb"
+      }
+    },
+    "owner": "ekansh_kanot"
   }
 }
