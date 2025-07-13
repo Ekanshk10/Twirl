@@ -7,6 +7,8 @@ import Animated, {
   withTiming,
   Easing,
 } from "react-native-reanimated";
+import { Audio } from "expo-av";
+
 
 const WheelOfFortune = forwardRef(({ options }, ref) => {
   const spin = useSharedValue(0);
@@ -18,7 +20,16 @@ const WheelOfFortune = forwardRef(({ options }, ref) => {
     transform: [{ rotate: `${spin.value}deg` }],
   }));
 
-  const spinWheel = () => {
+ const spinWheel = async () => {
+  try {
+    // Load sound
+    const { sound } = await Audio.Sound.createAsync(
+      require("../assets/sound/spin.mp3") // <-- Make sure you put your sound file in assets/sounds and update this path
+    );
+
+    // Play the sound
+    await sound.playAsync();
+
     spin.value = 0;
     const randomExtraSpins = 6;
     const randomFinalAngle = Math.floor(Math.random() * 360);
@@ -27,14 +38,21 @@ const WheelOfFortune = forwardRef(({ options }, ref) => {
     spin.value = withTiming(
       totalRotation,
       { duration: 4000, easing: Easing.out(Easing.cubic) },
-      () => {
+      async () => {
+        // Stop and unload sound when spin ends
+        await sound.stopAsync();
+        await sound.unloadAsync();
+
         const finalDeg = totalRotation % 360;
         const pickedIndex =
           Math.floor((360 - finalDeg) / anglePerOption) % numOptions;
         console.log("Selected: ", options[pickedIndex]);
       }
     );
-  };
+  } catch (error) {
+    console.log("Error playing sound: ", error);
+  }
+};
 
   useImperativeHandle(ref, () => ({
     spinWheel,
