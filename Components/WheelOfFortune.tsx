@@ -31,7 +31,7 @@ const WheelOfFortune = forwardRef(({ options }, ref) => {
     await sound.playAsync();
 
     spin.value = 0;
-    const randomExtraSpins = 6;
+    const randomExtraSpins = Math.floor(Math.random() * 6) + 5;
     const randomFinalAngle = Math.floor(Math.random() * 360);
     const totalRotation = 360 * randomExtraSpins + randomFinalAngle;
 
