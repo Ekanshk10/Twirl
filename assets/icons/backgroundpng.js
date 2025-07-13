@@ -10,21 +10,21 @@
     {
       source: require("../images/h29.png"),
       bottom: 100,
-      right: 40,
+      right: 30,
       rotate: "-20deg",
       width: 20,
       height: 20,
     },
     {
       source: require("../images/h32.png"),
-      bottom: 50,
+      bottom: 30,
       left: 60,
       rotate: "0deg",
     },
     {
       source: require("../images/h34.png"),
-      top: 250,
-      left: 50,
+      top: 5,
+      right: 50,
       rotate: "-10deg",
     },
     {
@@ -36,7 +36,7 @@
     {
       source: require("../images/h53.png"),
       top: 150,
-      right: 80,
+      right: 60,
       rotate: "-25deg",
     },
     {
@@ -49,6 +49,45 @@
       top: 400,
       left: 10,
       rotate: "30deg",
+    },
+    {
+      source: require("../images/h70.png"),
+      top: 620,
+      left: 150,
+      rotate: "30deg",
+    },
+    {
+      source: require("../images/h70.png"),
+      top: 380,
+      right: 10,
+      rotate: "30deg",
+    },
+    {
+      source: require("../images/h70.png"),
+      top: 150,
+      left: 50,
+      rotate: "30deg",
+    },
+    {
+      source: require("../images/h29.png"),
+      top: 100,
+      left: 30,
+      rotate: "-20deg",
+      width: 20,
+      height: 20,
+    },{
+      source: require("../images/h29.png"),
+      top: 450,
+      right: 150,
+      rotate: "-20deg",
+      width: 20,
+      height: 20,
+    },
+    {
+      source: require("../images/h34.png"),
+      bottom: 100,
+      left: 20,
+      rotate: "-10deg",
     },
   ];
 

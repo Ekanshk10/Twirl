@@ -14,9 +14,9 @@ import WheelOfFortune from "@/Components/WheelOfFortune";
 import backgroundpng from "../assets/icons/backgroundpng.js";
 
 export default function Index() {
-  
-  const defaultUserOptions = ["Pizza", "Burger", "Sushi", "Pasta"];
-  const extraOptions = ["Fries", "Noodles"];
+
+  const defaultUserOptions = ["Vada-pav", "Sandwich", "Mess", "Kachori"];
+  const extraOptions = ["Fries", "Paratha"];
   const [userInputs, setUserInputs] = useState(["", "", "", ""]);
   
   // Final options logic: use user input if not empty, else default
@@ -82,7 +82,7 @@ export default function Index() {
               }}
             >
               <Text className="text-white text-3xl font-normal text-center">
-                Spin the Wheel
+                Spin the Wheel 
               </Text>
             </TouchableOpacity>
           </View>
